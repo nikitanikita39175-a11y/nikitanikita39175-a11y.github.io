@@ -4,26 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clarify — Task Management</title>
+    <span class="text-xl font-bold whitespace-nowrap">Clarify Nexus</span>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-900 text-slate-50 font-sans antialiased">
 
     <!-- Залипающая шапка (Sticky Navbar) с эффектом стекла -->
     <div class="sticky top-0 z-50 bg-slate-900/85 backdrop-blur-md border-b border-slate-800">
-        <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold tracking-tighter text-indigo-400">Clarify</div>
-            <div class="flex items-center space-x-6 text-sm font-medium">
+        <nav class="max-w-6xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center gap-4">
+            
+            <!-- Логотип: запрещаем сужаться (shrink-0) и переноситься (whitespace-nowrap) -->
+            <div class="text-2xl font-bold tracking-tighter text-indigo-400 whitespace-nowrap shrink-0">Clarify</div>
+            
+            <!-- Меню: адаптируем отступы для мобилок (space-x-3) и ПК (md:space-x-6) -->
+            <div class="flex items-center space-x-3 md:space-x-6 text-sm font-medium">
                 <!-- Ссылки навигации -->
-                <a href="#features" class="hover:text-indigo-400 transition">
+                <a href="#features" class="hover:text-indigo-400 transition whitespace-nowrap">
                     <span class="lang-ru">Фичи</span><span class="lang-en hidden">Features</span>
                 </a>
-                <a href="#security" class="hover:text-indigo-400 transition">
+                <a href="#security" class="hover:text-indigo-400 transition whitespace-nowrap">
                     <span class="lang-ru">Безопасность</span><span class="lang-en hidden">Security</span>
                 </a>
-                <a href="https://github.com" target="_blank" class="hover:text-indigo-400 transition">GitHub</a>
+                <a href="https://github.com/nikitanikita39175-a11y" target="_blank" class="hover:text-indigo-400 transition whitespace-nowrap">GitHub</a>
                 
                 <!-- Кнопка переключения языка -->
-                <button onclick="toggleLanguage()" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-md transition font-bold text-indigo-400">
+                <button onclick="toggleLanguage()" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-md transition font-bold text-indigo-400 shrink-0">
                     <span class="lang-ru">EN</span>
                     <span class="lang-en hidden">RU</span>
                 </button>
@@ -44,9 +49,12 @@
             <span class="lang-en hidden">A powerful task tracker for solo developers and teams. Focus on what matters with Zen Mode, delegate routine to the AI Assistant, and keep your finger on the project's pulse.</span>
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="#" class="px-8 py-4 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold rounded-lg shadow-lg shadow-indigo-500/30 transition">
+            
+            <!-- Кнопка скачивания с добавленной ссылкой на Telegram -->
+            <a href="https://t.me/ClarifyPlan/5" target="_blank" class="px-8 py-4 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold rounded-lg shadow-lg shadow-indigo-500/30 transition">
                 <span class="lang-ru">Скачать Beta (Windows)</span><span class="lang-en hidden">Download Beta (Windows)</span>
             </a>
+            
             <a href="#features" class="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-lg transition border border-slate-700">
                 <span class="lang-ru">Узнать больше</span><span class="lang-en hidden">Learn more</span>
             </a>
